@@ -1,0 +1,175 @@
+
+=== BASE BRUTA ===
+Arquivo de entrada: C:\Users\pedro\OneDrive\Desktop\Vigia-Recife\VigiaRecife\data\csv - eventos.csv
+Registros: 5889 | Colunas: 38
+
+=== RESUMO DA LIMPEZA E TRATAMENTO ===
+Bairros únicos: 91
+Período: 2018-04-01 19:00:00 até 2026-07-19 21:00:00
+Registros com hora estimada (artefato 21h): 3769 (64.0%)
+
+=== ESTATÍSTICAS DE IDADE ===
+{
+  "media": 29.22,
+  "mediana": 27.0,
+  "moda": 22.0,
+  "desvio_padrao": 10.78,
+  "variancia": 116.2
+}
+
+=== TOP 15 BAIRROS COM MAIS OCORRÊNCIAS ===
+neighborhood
+IMBIRIBEIRA           125
+TORROES               131
+VASCO DA GAMA         136
+ILHA JOANA BEZERRA    139
+AGUA FRIA             148
+JARDIM SAO PAULO      152
+AFOGADOS              156
+BOA VIAGEM            175
+PINA                  193
+DOIS UNIDOS           198
+IPUTINGA              210
+NOVA DESCOBERTA       210
+COHAB                 229
+VARZEA                229
+IBURA                 230
+
+=== OCORRÊNCIAS POR ANO ===
+ano
+2018    536
+2019    535
+2020    788
+2021    767
+2022    714
+2023    794
+2024    780
+2025    657
+2026    318
+
+=== PAINEL — TOP 5 BAIRROS ===
+            Bairro  Ocorrências    Tipo predominante Gênero predominante Faixa etária   Dia crítico
+0            IBURA          230  HOMICIDIO/TENTATIVA           HOMEM CIS       ADULTO        SÁBADO
+1            COHAB          229  HOMICIDIO/TENTATIVA           HOMEM CIS       ADULTO        SÁBADO
+2           VARZEA          229  HOMICIDIO/TENTATIVA           HOMEM CIS       ADULTO       DOMINGO
+3         IPUTINGA          210  HOMICIDIO/TENTATIVA           HOMEM CIS       ADULTO  QUINTA-FEIRA
+4  NOVA DESCOBERTA          210  HOMICIDIO/TENTATIVA           HOMEM CIS       ADULTO        SÁBADO
+
+=== DISTRIBUIÇÃO POR DIA DA SEMANA ===
+dia_semana
+SEGUNDA-FEIRA     801
+TERÇA-FEIRA       872
+QUARTA-FEIRA      827
+QUINTA-FEIRA      817
+SEXTA-FEIRA       514
+SÁBADO           1147
+DOMINGO           911
+
+=== PIRÂMIDE ETÁRIA (GERAL) ===
+genre        HOMEM CIS  MULHER CIS
+ageGroup                          
+CRIANÇA              0           0
+ADOLESCENTE        241          31
+ADULTO            3427         260
+IDOSO               69          16
+
+=== ESCOLHA DE k (COTOVELO + SILHUETA) ===
+{
+  "inercias": {
+    "2": 857.2,
+    "3": 780.9,
+    "4": 721.3,
+    "5": 649.6,
+    "6": 597.5,
+    "7": 547.9,
+    "8": 528.9
+  },
+  "silhuetas": {
+    "2": 0.28,
+    "3": 0.208,
+    "4": 0.12,
+    "5": 0.088,
+    "6": 0.105,
+    "7": 0.112,
+    "8": 0.104
+  },
+  "k_escolhido": 2
+}
+
+=== RESUMO DOS CLUSTERS (k=2) ===
+         ocorrencias  idade_media  acao_policial  pct_fim_semana
+cluster                                                         
+0              48.18        31.22           0.12            0.34
+1              87.33        29.04           0.04            0.35
+
+=== TESTE DE TENDÊNCIA TEMPORAL ===
+{
+  "slope": -0.0067,
+  "p_valor": 0.88535,
+  "significativa": false,
+  "direcao": null
+}
+
+=== TOP 10 BAIRROS — MAIOR % AÇÃO POLICIAL ===
+                    ocorrencias  pct_acao
+neighborhood                             
+ILHA DO RETIRO               33      24.2
+CAMPINA DO BARRETO           39      15.4
+BOA VISTA                    61      11.5
+IBURA                       230      11.3
+JORDAO                       82      11.0
+CASA AMARELA                 55      10.9
+ENGENHO DO MEIO              28      10.7
+IPSEP                        61       9.8
+SANTO AMARO                  92       9.8
+SITIO DOS PINTOS             42       9.5
+
+=== TOP 10 BAIRROS — MENOR % AÇÃO POLICIAL ===
+                    ocorrencias  pct_acao
+neighborhood                             
+ESTANCIA                     21       0.0
+BEBERIBE                     30       0.0
+TEJIPIO                      33       0.0
+PRADO                        49       0.0
+BRASILIA TEIMOSA             96       1.0
+COELHOS                      78       1.3
+MUSTARDINHA                  75       1.3
+BOMBA DO HEMETERIO           76       1.3
+AGUA FRIA                   148       1.4
+JIQUIA                       74       1.4
+
+=== AÇÃO POLICIAL POR TIPO DE OCORRÊNCIA ===
+                     ocorrencias  pct_acao
+main_reason                               
+AÇÃO POLICIAL                216     100.0
+OPERAÇÃO POLICIAL             35     100.0
+TENTATIVA/ROUBO              401      13.5
+DISPUTA                       22       4.5
+BRIGA                        169       1.2
+HOMICIDIO/TENTATIVA         4755       0.1
+ATAQUE A CIVIS                62       0.0
+NÃO IDENTIFICADO             161       0.0
+TIROS A ESMO                  31       0.0
+
+=== INTEGRAÇÃO COM BASES EXTERNAS ===
+Total registros integrados: 5889
+           fonte                main_reason  registros
+6   FOGO_CRUZADO        HOMICIDIO/TENTATIVA       4755
+12  FOGO_CRUZADO            TENTATIVA/ROUBO        401
+2   FOGO_CRUZADO              AÇÃO POLICIAL        216
+3   FOGO_CRUZADO                      BRIGA        169
+7   FOGO_CRUZADO           NÃO IDENTIFICADO        161
+1   FOGO_CRUZADO             ATAQUE A CIVIS         62
+8   FOGO_CRUZADO          OPERAÇÃO POLICIAL         35
+15  FOGO_CRUZADO               TIROS A ESMO         31
+5   FOGO_CRUZADO                    DISPUTA         22
+13  FOGO_CRUZADO    TENTATIVA/ROUBO A BANCO          8
+0   FOGO_CRUZADO                   ARRASTÃO          7
+4   FOGO_CRUZADO          DISPARO ACIDENTAL          7
+9   FOGO_CRUZADO                      OUTRO          6
+11  FOGO_CRUZADO                   SUICÍDIO          5
+10  FOGO_CRUZADO  SEQUESTRO/CÁRCERE PRIVADO          2
+14  FOGO_CRUZADO  TENTATIVA/ROUBO DE CARGAS          2
+
+=== RELATOS CIDADÃOS ===
+Total de relatos: 0
